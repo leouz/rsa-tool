@@ -1,0 +1,20 @@
+Implementar, em linguagem de programação, o esquema RSA. 
+O programa deve ser APRESENTADO pelo aluno.
+O código deve estar disponível na apresentação, e o executável funcionando corretamente.
+
+Sugere-se que se empregue alguma biblioteca de BIG NUMBERS, 
+disponível gratuitamente na rede em diversas LP.
+
+OBS: as operações modulares DEVEM ser implementadas.
+
+Sugere-se que o usuário ESCOLHA "P" e "Q" (combo box). 
+O sistema pode apresentar os possíveis "E" (outra combo). O usuário, ao escolher um "E", 
+permite que o sistema gere um "D".
+
+Para a cifragem e decifragem da mensagem (que o usuário deverá digitar), 
+cada aluno define como irá codificar. 
+O importante é que a mensagem cifrada possa ser editável, 
+pois eu farei testes para verificar o que ocorre ao decifrar a mensagem.
+
+O arquivo pode ser compactado (essa atividade prevê envio de arquivo único: assim, 
+se você tiver mais do que um arquivo, compacte-os).
