@@ -7,8 +7,8 @@ test_inputs = [
 ]
 
 test_inputs.each { |input| 
-	describe Crypto do
-		c = Crypto.new
+	describe Rsa do
+		c = Rsa.new
 
 		# before(:all) do    	
 			e_possibilities = c.get_e_possibilities input[:p], input[:q]
@@ -96,7 +96,7 @@ test_inputs.each { |input|
 }
 
 # describe "calc number" do
-# 	c = Crypto.new
+# 	c = Rsa.new
 
 # 	it "14 7 33" do
 # 		c.calc_number(14, 7, 33).should == 20

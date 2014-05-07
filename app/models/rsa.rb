@@ -1,6 +1,6 @@
 require 'prime'
 
-class Crypto
+class Rsa
 	attr_accessor :p, :q, :n_public_key, :z, :e_public_key, :d_secret_key
 
 	#generate key part 1
@@ -10,15 +10,7 @@ class Crypto
 		@n_public_key = @p * @q
 		@z = (@p - 1) * (@q - 1)
 
-		(get_primes_until(@z) - factor(@z)) - [2]
-	end
-
-	def get_primes_until input
-		Prime.take_while { |p| p < input } - [2]
-	end
-
-	def factor input
-		Prime.prime_division(input).map{ |k, v| k }
+		(Common.get_primes_until(@z + 100) - Common.factor(@z)) - [2]
 	end
 
 	#generate key part 2

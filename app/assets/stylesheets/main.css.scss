@@ -1,3 +1,13 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+textarea {
+  height: 140px;
+  width: 95%;
+  padding-right: 10px;
+}
+
+select {
+  width: 70px;
+}
+
+.row.form-actions {
+  margin-left: 1px;
+}

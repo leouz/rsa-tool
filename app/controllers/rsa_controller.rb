@@ -1,12 +1,13 @@
-class MainController < ApplicationController
+class RsaController < ApplicationController
 	respond_to :json
 
 	def c
-		session[:crypto] = session[:crypto] ? session[:crypto] : Crypto.new		
+		session[:rsa] = session[:rsa] ? session[:rsa] : Rsa.new		
 	end
 
 	def index
-		@primes = c.get_primes_until 1000
+    @algorithm = "RSA"
+		@primes = Common.get_primes_until 1000
 	end
 
 	def get_e_possibilities

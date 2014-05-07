@@ -1,0 +1,99 @@
+form#eliptic-groups
+  = simple_fields_for :ecc do |f|
+    .form-horizontal
+      = f.input :p
+      = f.input :a
+      = f.input :b
+      .control-group
+        .controls
+          span.btn.calc Calc Eliptic Groups    
+    table.table
+      thead
+        th sieve          
+        th y1
+        th y2
+        th valid
+      tbody#result
+hr
+hr
+form#sum
+  = simple_fields_for :ecc do |f|
+    .form-horizontal
+      = f.input :x1
+      = f.input :y1
+      = f.input :x2
+      = f.input :y2
+      = f.input :p
+      = f.input :a
+      .control-group
+        .controls
+          span.btn.calc operation="sum" Sum
+          span.btn.calc operation="diff" Diff
+    table.table
+      thead
+        th lambda
+        th x3
+        th y3   
+        th message     
+      tbody#result
+hr
+hr
+form#product
+  = simple_fields_for :ecc do |f|
+    .form-horizontal
+      = f.input :x1
+      = f.input :y1
+      = f.input :p
+      = f.input :a
+      = f.input :n
+      .control-group
+        .controls
+          span.btn.calc Product
+      .row    
+        .span4
+          p Binary    
+          table.table.table-bordered
+            thead
+              th 0
+              th 1
+              th 2
+              th 3
+            tbody
+              tr#binary             
+        .span4
+          p Binary Reverse 
+          table.table.table-bordered
+            thead
+              th 0
+              th 1
+              th 2
+              th 3
+            tbody
+              tr#binary-reverse
+        .span4
+          p Sums
+          table.table.table-bordered
+            thead
+              th 0
+              th 1
+              th 2
+              th 3
+            tbody
+              tr#sums
+      .row
+        p Sum Log
+        table.table
+          thead
+            th x1
+            th y1
+            th x2
+            th y2 
+            th x3
+            th y3
+            th lambda
+            th message     
+          tbody#log
+      .row
+        p Product <em id=product-result></em>
+
+

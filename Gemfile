@@ -20,3 +20,5 @@ group :test, :development do
 	gem 'debugger'
 	gem "therubyracer"
 end
+
+gem "slim-rails"

@@ -1,0 +1,30 @@
+form#rsa
+  = simple_fields_for :rsa do |f|
+    .row
+      .span3.form-horizontal
+        = f.input :p, :collection => @primes
+      .span3.form-horizontal
+        = f.input :q, :collection => @primes
+      .span3.form-horizontal
+        = f.input :e, :collection => []
+      .span3.form-horizontal
+        .control-group.select.required.rsa_d
+          label.select.required.control-label for="rsa_d"
+            abbr title="required" D
+          .controls
+            label#rsa_d name="rsa[d]"
+    hr
+      .row
+        .span4= f.input :input, as: :text
+        .span4= f.input :encrypted, as: :text
+        .span4= f.input :decrypted, as: :text
+      .row.form-actions
+        .span4
+          a#encrypt.btn.span2.btn-primary type="submit" 
+            | Encrypt  
+            .i.icon-arrow-right
+        .span4
+          a#decrypt.btn.span2.btn-primary type="submit"
+            | Decrypt  
+            .i.icon-arrow-right
+        .span4

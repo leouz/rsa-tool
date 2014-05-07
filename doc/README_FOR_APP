@@ -1,20 +1,69 @@
-Implementar, em linguagem de programação, o esquema RSA. 
-O programa deve ser APRESENTADO pelo aluno.
-O código deve estar disponível na apresentação, e o executável funcionando corretamente.
+calcula os crivos quadráticos, o grupo eliptico
+depois as operações(soma, diferença e multiplicação)
+o mais foda é a multiplicação
 
-Sugere-se que se empregue alguma biblioteca de BIG NUMBERS, 
-disponível gratuitamente na rede em diversas LP.
+GRUPO ELIPTICO
+calcula o grupo eliptico com base na equação y²=x³+ax+b mod p
+calcula a raiz e depois faz o mod
 
-OBS: as operações modulares DEVEM ser implementadas.
+os x tu vai substituindo pelos crivos e ve se forma um ponto, sem ser ponto infinito
+esses que der são os pontos do grupo elíptico
 
-Sugere-se que o usuário ESCOLHA "P" e "Q" (combo box). 
-O sistema pode apresentar os possíveis "E" (outra combo). O usuário, ao escolher um "E", 
-permite que o sistema gere um "D".
+SOMA
+na soma tu ve se os pontos são iguais ou são diferentes
+se forem iguais o calculo do lambda e de um jeito, se não for é de outro
 
-Para a cifragem e decifragem da mensagem (que o usuário deverá digitar), 
-cada aluno define como irá codificar. 
-O importante é que a mensagem cifrada possa ser editável, 
-pois eu farei testes para verificar o que ocorre ao decifrar a mensagem.
+daí depois de calcular o lambida tem as formulas para calcular o ponto resultante
+pega o lambida e calcula o x3
+daí pega o x3 e substitui por esse valor na formula pra ti achar o y3
+daí o ponto resultante da soma é o (x3,y3)
+espero que tenha ficado claro
 
-O arquivo pode ser compactado (essa atividade prevê envio de arquivo único: assim, 
-se você tiver mais do que um arquivo, compacte-os).
+8:06pm
+Leandro Moraes
+para fazer a diferença tem uma formula, tu usa ela e calcula um ponto
+com esse ponto tu faz a operação de soma
+o resultado da diferença é o resultado dessa soma
+(x3,y3)
+
+8:09pm
+Leonardo Uzon Nowaczyk
+bah valeu mto por essa explicacao ai
+
+8:15pm
+Leonardo Uzon Nowaczyk
+tu tem os exercicios de calculo feitos?
+principalmente depois dos lance dos crivos
+faltei uma aula ali
+e me perdi
+Saturday
+
+11:19am
+Leandro Moraes
+se tu sabe calcular os crivos
+usa a formula do y²=x³+ax+b mod p
+primeiro extrai a raiz e depois aplica o mod
+tipo raiz de 16...
+-4mod p
+e 4 mod p
+o x dessa fórmula tu vai substituindo pelos crivos que tu achou
+crivo 1
+a=1
+b=2
+p=11
+daí um exemplo:
+y²=1³+1.1+2 mod 11
+y²=4
+extrai a raiz
+-2mod11=9
+esse ponto do grupo eliptico (crivo que tu usou, valor que tu achou)
+( 1 , 9 )
+2mod11=2
+esse ponto do grupo eliptico (crivo que tu usou, valor que tu achou)
+( 1 , 2 )
+acho que assim fica melhor de tu entender
+fez com o crivo 1, daí tu faz com o crivo seguinte....
+e assim por diante
+esses pontos que tu achar tipo (1,2),(1,9) ...... são o grupo eliptico
+para soma e diferença tu olha o pdf que tem no moodle.
+a explicação é meio foda, mas na mão o cara faz tranquilo
