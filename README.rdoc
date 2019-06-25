@@ -1,3 +1,1 @@
-RSA Simple Tool made for a class at university
-
-Isn't 100%, isn't fully test, it was made in hurry.
+RSA Simple Tool
